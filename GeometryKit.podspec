@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "12.0"
 
   spec.source = { :git => "https://github.com/muukii/GeometryKit.git", :tag => "#{spec.version}" }
-  spec.source_files = "GeometryKit/**/*.swift"  
+  spec.source_files = "Sources/**/*.swift"  
   spec.framework = "UIKit"
   spec.requires_arc = true
   spec.swift_versions = ["5.3", "5.4", "5.5"]
