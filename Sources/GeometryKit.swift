@@ -87,4 +87,36 @@ extension Geometry {
 
     return _to / _from
   }
+
+  /**
+   Returns a transform that makes `from` rect that `to` rect.
+   */
+  public static func transform(from: CGRect, to: CGRect) -> CGAffineTransform {
+
+    return .init(
+      a: to.width / from.width,
+      b: 0,
+      c: 0,
+      d: to.height / from.height,
+      tx: to.midX - from.midX,
+      ty: to.midY - from.midY
+    )
+  }
+
+  /**
+   Returns a pair of `center` and `scale` that makes `from` rect that `to` rect.
+   */
+  public static func centerAndScale(from: CGRect, to: CGRect) -> (center: CGPoint, scale: CGPoint) {
+
+    return (
+      center: center(of: to),
+      scale: .init(x: to.width / from.width, y: to.height / from.height)
+    )
+
+  }
+
+  public static func center(of rect: CGRect) -> CGPoint {
+    CGPoint(x: rect.midX, y: rect.midY)
+  }
+
 }
