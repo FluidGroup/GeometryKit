@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "GeometryKit"
-  spec.version = "1.0.0"
+  spec.version = "1.1.0"
   spec.summary = "A set of geometry"
   spec.description = <<-DESC
   A tool to calculate geometry.
